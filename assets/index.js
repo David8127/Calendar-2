@@ -10,12 +10,12 @@ $(document).ready(function () {
         var currentClockHour = today.format("HH");
         console.log(currentClockHour);
         $('.time-block').each(function () {
-            var blockHour = parseInt($(this).attr('id'));
-            console.log(blockHour);
+            var blockTime = parseInt($(this).attr('id').split('-')[0]);
+            console.log(blockTime);
             //adds classes to color code text block based on hour of day
-            if (blockHour > currentClockHour) {
+            if (blockTime > currentClockHour) {
                 $(this).addClass('future');
-            } else if (blockHour == currentClockHour) {
+            } else if (blockTime == currentClockHour) {
                 $(this).removeClass('future');
                 $(this).addClass('present');
             } else {
@@ -28,8 +28,9 @@ $(document).ready(function () {
 
     pastOrPresent();
 
-    btn.on('click', function() {
-        
+    //click event that stores user input in local storage
+    btn.on('click', function () {
+
         var storedTime = $(this).parent().attr('id');
         var taskInput = $(this).siblings('.description').val();
         //sending data to local storage
@@ -38,15 +39,18 @@ $(document).ready(function () {
         alert("Saved to local storage!");
     })
 
-    function loadSavedData() {
-        $.each(localStorage, function(key, value){
+    function viewSavedData() {
+        Object.keys(localStorage).forEach((key) => {
+            console.log(localStorage.getItem(key));
             
-          
-          });
+        })
     }
+    
+    //send local storage value to corresponding textarea
+    $('#09-hr .description').val(localStorage.getItem('09-hr'));
+  
 
-    loadSavedData();
-
+    viewSavedData();
 
 
 })
