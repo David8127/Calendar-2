@@ -46,11 +46,17 @@ $(document).ready(function () {
         })
     }
     
-    //send local storage value to corresponding textarea
-    $('#09-hr .description').val(localStorage.getItem('09-hr'));
-  
-
     viewSavedData();
 
-
+    //send local storage value to corresponding textarea
+    $('#09-hr .description').val(localStorage.getItem('09-hr'));
+    $('#10-hr .description').val(localStorage.getItem('10-hr'));
+    $('#11-hr .description').val(localStorage.getItem('11-hr'));
+    $('#12-hr .description').val(localStorage.getItem('12-hr'));
+    $('#13-hr .description').val(localStorage.getItem('13-hr'));
+    $('#14-hr .description').val(localStorage.getItem('14-hr'));
+    $('#15-hr .description').val(localStorage.getItem('15-hr'));
+    $('#16-hr .description').val(localStorage.getItem('16-hr'));
+    $('#17-hr .description').val(localStorage.getItem('17-hr'));
+    
 })

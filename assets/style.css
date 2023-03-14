@@ -15,10 +15,14 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: rgba(24, 27, 211, 0.596);
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+}
+
+#currentDay {
+  font-weight:bold ;
 }
 
 .description {
@@ -37,6 +41,7 @@ textarea {
 }
 
 .hour {
+  font-weight: bold;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
