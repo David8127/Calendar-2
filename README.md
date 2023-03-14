@@ -18,14 +18,14 @@ N/A
 
 ## Technologies Used
 
-### HTML
-### CSS
-### Javascript
-### Moment.js
-### jQuery
+- HTML
+- CSS
+- Javascript
+- Moment.js
+- jQuery
 
 ## Visual of App
-(./assets/scheduleExample.JPG)
+![Example of app with saved events.](./assets/scheduleExample.JPG)
 
 
 ## Links
